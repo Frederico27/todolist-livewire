@@ -5,8 +5,8 @@
     },
     "routes": [
         {
-            "src": "/(.*)",
-            "dest": "/public/assets/"
+            "src": "/assets/(.*)",
+            "dest": "/public/assets/$1"
         },
         {
             "src": "/favicon/(.*)",
