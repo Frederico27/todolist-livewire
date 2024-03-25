@@ -3,16 +3,7 @@
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.7.0" }
     },
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/api/index.php"
-        },
-        { 
-            "src": "/(css|js)/(.*)$",
-            "dest": "/api/assets.php?type=$1&file=$2"
-        }
-    ],
+    "routes": [ { "src": "/build/(.*)", "dest": "/public/build/" }, { "src": "/resources/(.*)", "dest": "/public/resources/" }, { "src": "/favicon/(.*)", "dest": "/public/favicon/" }, { "src": "/(.*)", "dest": "/api/index.php" } ],
     "env": {
         "APP_NAME": "Laravel Vercel",
         "APP_ENV": "production",
