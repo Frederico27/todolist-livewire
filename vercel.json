@@ -7,6 +7,10 @@
         {
             "src": "/(.*)",
             "dest": "/api/index.php"
+        },
+        { 
+            "src": "/(css|js)/(.*)$",
+            "dest": "/api/assets.php?type=$1&file=$2"
         }
     ],
     "env": {
@@ -27,5 +31,18 @@
         "VIEW_COMPILED_PATH": "/tmp/views",
         "SSR_TEMP_PATH": "/tmp/ssr",
         "NODE_PATH": "node"
+    },
+
+    "scripts": {
+        "vercel": [
+          "@php -v",
+          "npm -v",
+          "npm install && npm run dev"
+        ],
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ]
     }
+    
 }
