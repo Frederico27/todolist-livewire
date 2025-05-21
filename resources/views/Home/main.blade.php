@@ -15,9 +15,9 @@
 
 <body>
     @livewireStyles
-    @includeUnless($boolean, 'home.navbar')
+    @includeUnless($boolean, 'Home.navbar')
     @yield('content')
-    @includeUnless($boolean,'home.footer')
+    @includeUnless($boolean,'Home.footer')
     @livewireScripts
 </body>
 

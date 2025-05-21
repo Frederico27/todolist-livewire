@@ -1,4 +1,4 @@
-@extends('home.main')
+@extends('Home.main')
 
 @php
     $boolean = false;
