@@ -26,6 +26,7 @@
 <script src="https://cdn.reflowhq.com/v2/toolkit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/Frederico27/todolist-livewire/public/assets/js/bs-init.js"></script>
 
+{{-- //Modal --}}
 <script>
     $('#myModal').modal('show'); 
 </script>
